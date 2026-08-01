@@ -138,7 +138,7 @@ unlockBtn.innerHTML="Unlocked ❤️";
 
 setTimeout(()=>{
 
-showPage(letterpage);
+showPage(letterPage);
 
 typeLetter();
 
