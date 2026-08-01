@@ -126,7 +126,7 @@ showPage(passwordPage);
 // PASSWORD
 // ==========================================
 
-const PASSWORD="260523";
+const PASSWORD="26523";
 
 unlockBtn.addEventListener("click",()=>{
 
