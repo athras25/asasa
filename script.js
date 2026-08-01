@@ -161,22 +161,6 @@ passwordInput.classList.remove("shake");
 
 });
 
-// ==========================================
-// PHOTO SLIDESHOW
-// ==========================================
-
-const photos=[
-
-"photo1.jpg",
-
-"photo2.jpg",
-
-];
-
-let currentPhoto=0;
-
-function startSlideshow(){
-
 photo.src=photos[0];
 
 const slide=setInterval(()=>{
