@@ -138,9 +138,9 @@ unlockBtn.innerHTML="Unlocked ❤️";
 
 setTimeout(()=>{
 
-showPage(gallery);
+showPage(letterpage);
 
-startSlideshow();
+typeLetter();
 
 },700);
 
