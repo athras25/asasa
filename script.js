@@ -173,10 +173,6 @@ const photos=[
 
 "photo3.jpg",
 
-"photo4.jpg",
-
-"photo5.jpg"
-
 ];
 
 let currentPhoto=0;
