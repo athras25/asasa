@@ -1,0 +1,806 @@
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+
+width:100%;
+height:100%;
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+background:#040714;
+
+color:white;
+
+}
+
+/* ===========================================
+   PAGES
+=========================================== */
+
+.page{
+
+position:fixed;
+inset:0;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+padding:20px;
+
+background:#040714;
+
+overflow:hidden;
+
+}
+
+.page.active{
+
+display:flex;
+
+animation:fade .9s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:scale(1.02);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================================
+   STARS
+=========================================== */
+
+#stars{
+
+position:fixed;
+
+inset:0;
+
+background:#040714;
+
+z-index:-30;
+
+overflow:hidden;
+
+}
+
+#stars::before,
+#stars::after{
+
+content:"";
+
+position:absolute;
+
+inset:-100%;
+
+background-image:
+
+radial-gradient(2px 2px at 20% 20%,white,transparent),
+radial-gradient(2px 2px at 40% 80%,white,transparent),
+radial-gradient(2px 2px at 80% 40%,white,transparent),
+radial-gradient(2px 2px at 60% 60%,white,transparent),
+radial-gradient(2px 2px at 90% 20%,white,transparent),
+radial-gradient(2px 2px at 10% 70%,white,transparent);
+
+animation:starsMove 100s linear infinite;
+
+opacity:.7;
+
+}
+
+#stars::after{
+
+animation-duration:150s;
+
+opacity:.3;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(180px);
+
+}
+
+}
+
+/* ===========================================
+   FLOATING HEARTS
+=========================================== */
+
+#hearts{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:0;
+
+}
+
+.floatingHeart{
+
+position:absolute;
+
+bottom:-50px;
+
+animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.8);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================================
+   ROSES
+=========================================== */
+
+#petals{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:1;
+
+}
+
+/* ===========================================
+   LOGO
+=========================================== */
+
+.logo{
+
+font-family:'Great Vibes',cursive;
+
+font-size:72px;
+
+text-align:center;
+
+color:#ffd8e7;
+
+text-shadow:
+
+0 0 30px #ff80aa;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+opacity:.85;
+
+margin-bottom:45px;
+
+text-align:center;
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+button{
+
+padding:15px 38px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#ff4d88,#ff83b2);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 0 30px rgba(255,90,150,.5);
+
+}
+
+button:hover{
+
+transform:scale(1.06);
+
+}
+
+/* ===========================================
+   SCANNER
+=========================================== */
+
+.scanBox{
+
+width:100%;
+
+max-width:420px;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+}
+
+.progress{
+
+height:12px;
+
+background:#1f2432;
+
+border-radius:30px;
+
+margin-top:25px;
+
+overflow:hidden;
+
+}
+
+#progressBar{
+
+width:0;
+
+height:100%;
+
+background:linear-gradient(90deg,#ff4d88,#ffc0da);
+
+}
+
+/* ===========================================
+   PASSWORD
+=========================================== */
+
+.password-box{
+
+width:92%;
+
+max-width:600px;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+
+}
+
+.password-box h1{
+
+font-size:clamp(28px,5vw,42px);
+
+margin-bottom:25px;
+
+white-space:nowrap;
+
+}
+
+.riddle{
+
+line-height:1.8;
+
+font-size:16px;
+
+margin-bottom:25px;
+
+}
+
+.password-box input{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+font-size:18px;
+
+text-align:center;
+
+outline:none;
+
+}
+
+#wrongPassword{
+
+margin-top:15px;
+
+color:#ff9f9f;
+
+font-weight:bold;
+
+}
+
+.shake{
+
+animation:shake .4s;
+
+}
+
+@keyframes shake{
+
+0%,100%{
+
+transform:translateX(0);
+
+}
+
+20%{
+
+transform:translateX(-8px);
+
+}
+
+40%{
+
+transform:translateX(8px);
+
+}
+
+60%{
+
+transform:translateX(-8px);
+
+}
+
+80%{
+
+transform:translateX(8px);
+
+}
+
+}
+
+/* ===========================================
+   GALLERY
+=========================================== */
+
+#photo{
+
+width:90vw;
+
+max-width:400px;
+
+height:70vh;
+
+object-fit:cover;
+
+border-radius:25px;
+
+border:4px solid rgba(255,255,255,.2);
+
+transition:1s;
+
+box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.caption{
+
+margin-top:25px;
+
+font-size:18px;
+
+text-align:center;
+
+}
+
+/* ===========================================
+   LETTER
+=========================================== */
+
+.envelope{
+
+width:95%;
+
+max-width:650px;
+
+padding:30px;
+
+background:rgba(255,255,255,.1);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+}
+
+.letter{
+
+max-height:55vh;
+
+overflow-y:auto;
+
+line-height:1.8;
+
+padding-right:8px;
+
+}
+
+.letter h2{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+#typing{
+
+white-space:pre-line;
+
+}
+
+#next{
+
+margin-top:30px;
+
+display:none;
+
+}
+
+/* ===========================================
+   FINAL
+=========================================== */
+
+#bgImage{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+z-index:-3;
+
+transition:1s;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.55);
+
+z-index:-2;
+
+}
+
+.glass{
+
+padding:35px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+}
+
+.glass h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:62px;
+
+margin-bottom:20px;
+
+}
+
+#fireworks{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+}
+
+/* ===========================================
+   PROPOSAL
+=========================================== */
+
+.proposal-card{
+
+width:92%;
+
+max-width:650px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+}
+
+.ringBox{
+
+width:150px;
+
+height:120px;
+
+margin:auto;
+
+position:relative;
+
+animation:boxFloat 2.5s infinite ease-in-out;
+
+}
+
+@keyframes boxFloat{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+.ringLid{
+
+width:150px;
+
+height:35px;
+
+background:#b8843d;
+
+border-radius:12px;
+
+transform-origin:bottom;
+
+animation:openBox 2s forwards;
+
+}
+
+@keyframes openBox{
+
+100%{
+
+transform:rotateX(-120deg);
+
+}
+
+}
+
+.diamond{
+
+font-size:70px;
+
+margin-top:10px;
+
+animation:sparkle 1.2s infinite alternate;
+
+}
+
+@keyframes sparkle{
+
+from{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 5px white);
+
+}
+
+to{
+
+transform:scale(1.15);
+
+filter:drop-shadow(0 0 20px gold);
+
+}
+
+}
+
+.proposal-card h1{
+
+margin:25px 0;
+
+}
+
+.proposalText{
+
+line-height:1.8;
+
+margin:25px 0;
+
+}
+
+.proposal-card h2{
+
+font-size:38px;
+
+margin-bottom:30px;
+
+color:#ffb5d0;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/* ===========================================
+   END
+=========================================== */
+
+.endingContent{
+
+text-align:center;
+
+}
+
+.endingContent h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:72px;
+
+margin-bottom:25px;
+
+color:#ffd5e6;
+
+}
+
+.endingContent p{
+
+font-size:22px;
+
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media(max-width:768px){
+
+.logo{
+
+font-size:54px;
+
+}
+
+.proposal-card{
+
+padding:30px;
+
+}
+
+.proposal-card h2{
+
+font-size:28px;
+
+}
+
+.glass h1{
+
+font-size:46px;
+
+}
+
+#photo{
+
+height:60vh;
+
+}
+
+button{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+}
