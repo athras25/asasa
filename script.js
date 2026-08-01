@@ -149,7 +149,7 @@ setInterval(createHeart, 500);
 // LOVE LETTER
 // ==========================================
 
-const message = `My Dearest kkkk ❤️
+const message = `My Dearest Diya ❤️
 
 Happy Girlfriend's Day!
 
