@@ -149,7 +149,7 @@ setInterval(createHeart, 500);
 // LOVE LETTER
 // ==========================================
 
-const message = `My Dearest Diya ❤️
+const message = `My Dearest Cutu ❤️
 
 Happy Girlfriend's Day!
 
@@ -167,7 +167,7 @@ I want every tomorrow, every dream, every adventure, and every beautiful memory 
 
 Forever Yours,
 
-❤️ zzz`;
+❤️ A`;
 
 let letterIndex = 0;
 
