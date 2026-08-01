@@ -52,7 +52,7 @@ const messages = [
     "Matching heartbeats...",
     "Reading memories...",
     "Checking compatibility...",
-    "Soulmate Found ❤️"
+    "Cutu Found ❤️"
 ];
 
 function startScanner() {
