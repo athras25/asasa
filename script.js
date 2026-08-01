@@ -74,7 +74,7 @@ const messages=[
 
 "Connecting to the Universe...",
 
-"Finding your soulmate...",
+"Finding your cutu...",
 
 "Matching heartbeats...",
 
@@ -82,7 +82,7 @@ const messages=[
 
 "Checking compatibility...",
 
-"Soulmate Found ❤️"
+"Cutu Found ❤️"
 
 ];
 
@@ -126,7 +126,7 @@ showPage(passwordPage);
 // PASSWORD
 // ==========================================
 
-const PASSWORD="13178";
+const PASSWORD="260523";
 
 unlockBtn.addEventListener("click",()=>{
 
@@ -249,7 +249,7 @@ setInterval(createHeart,500);
 // LOVE LETTER
 // ==========================================
 
-const message = `My Dearest Reesha ❤️
+const message = `My Dearest zzzz ❤️
 
 Happy Girlfriend's Day!
 
@@ -279,7 +279,7 @@ to be with you.
 
 Forever Yours,
 
-❤️ Piyush`;
+❤️ ZZZZ`;
 
 let letterIndex = 0;
 
